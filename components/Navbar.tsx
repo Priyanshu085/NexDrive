@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import CustomButton from "./CustomButton";
 
 const NavBar = () => (
@@ -19,7 +18,7 @@ const NavBar = () => (
       <CustomButton
         title='Sign in'
         btnType='button'
-        containerStyles='text-primary-blue rounded-full bg-white min-w-[130px]'
+        containerStyles='text-primary rounded-full bg-white min-w-[130px]'
       />
     </nav>
   </header>
