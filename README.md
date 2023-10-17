@@ -29,6 +29,7 @@
 - **Tailwind CSS**: A utility-first CSS framework for quickly building custom designs.
 - **MongoDB**: A NoSQL database used for storing prompt data.
 
+<!--
 ## Deployment
 
 The project is deployed and can be viewed live at [nexdrive-085.vercel.app](https://nexdrive-085.vercel.app).
@@ -47,3 +48,4 @@ The project is deployed and can be viewed live at [nexdrive-085.vercel.app](http
 ## License
 
 [MIT LICENSE](license)
+-->
