@@ -13,17 +13,18 @@ const SearchManufacturer = ({manufacturer, setManuFacturer}: SearchManuFacturerP
     query === ""
      ? manufacturers
      : manufacturers.filter((items) => (
-      items.toLowerCase()
-      .replace(/\s+/g, '')
-      .includes(query.toLowerCase().replace(/\s+/g, "")
+      items
+        .toLowerCase()
+        .replace(/\s+/g, '')
+        .includes(query.toLowerCase().replace(/\s+/g, "")
     )))
 
 
   return (
     <div className='search-manufacturer'>
-      <Combobox>
+      <Combobox value={manufacturer} onChange={setManuFacturer}>
         <div className='relative w-full'>
-          <Combobox.Button>
+          <Combobox.Button className='absolute top-[14px]'>
             <Image 
               src="/car-logo.svg"
               alt="car logo"
@@ -48,20 +49,33 @@ const SearchManufacturer = ({manufacturer, setManuFacturer}: SearchManuFacturerP
             afterLeave={() => setQuery('')}
           >
 
-          <Combobox.Options>
+            <Combobox.Options
+              className='absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'
+              static
+            >
             {filteredManufacturers.map((item) => (
                 <Combobox.Option
                   key={item}
-                  className={({ active }) => `px-2 relative seacrch-manufacturer__option ${active ? 'bg-primary text-white' : 'text-gray-900'}  `} 
+                  className={({ active }) => `px-2 relative seacrch-manufacturer__option 
+                  ${active ? 'bg-primary text-white' : 'text-gray-900'}  `} 
                   value={item}
                 >
-                  {item}
+                  {({ selected, active}) => (
+                    <>
+                    <span className={`blcok truncate ${selected} ? 'font-medium' : 'font-normal'`}>
+                      {item}
+                    </span>
+                    {selected ? (
+                      <span className={`absolute inset-y-0 left-0 items-center flex pl-3 ${active ? 'text-white' : 'text-teal-600'}`}>
+                      </span>
+                    ): null}
+                    </>
+                  )}
                 </Combobox.Option>
               )
             )}
           </Combobox.Options>
           </Transition>
-
         </div>
       </Combobox>
     </div>
