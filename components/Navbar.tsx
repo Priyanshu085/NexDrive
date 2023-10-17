@@ -9,10 +9,11 @@ const NavBar = () => (
         <Image
           src='/logo.svg'
           alt='logo'
-          width={118}
-          height={18}
+          width={85}
+          height={20}
           className='object-contain'
         />
+        <h2 className="text-3xl text-primary font-bold">NexDrive</h2>
       </Link>
 
       <CustomButton
