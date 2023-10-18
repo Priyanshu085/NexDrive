@@ -1,8 +1,13 @@
 # NexDrive
 
-![Project Image](/nexdrive/public/screenshots/)
+<!-- ![Project Image](/nexdrive/public/screenshots/) -->
 
-<!-- > A prompt sharing website. -->
+
+## Description
+
+.
+
+<!--
 
 ## Table of Contents
 
@@ -14,11 +19,8 @@
 - [Usage](#usage)
 - [License](#license)
 
-## Description
-
-.
-
 ## Features
+- 
 
 
 ## Technologies Used
@@ -27,8 +29,6 @@
 - **JavaScript (JS)**: The primary programming language used for frontend functionality.
 - **Tailwind CSS**: A utility-first CSS framework for quickly building custom designs.
 - **MongoDB**: A NoSQL database used for storing prompt data.
-
-<!--
 ## Deployment
 
 The project is deployed and can be viewed live at [nexdrive-085.vercel.app](https://nexdrive-085.vercel.app).
