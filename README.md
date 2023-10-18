@@ -20,7 +20,6 @@
 
 ## Features
 
-<!-- - **Prompt Sharing**:  The platform is designed to work seamlessly on various devices. -->
 
 ## Technologies Used
 
@@ -45,7 +44,7 @@ The project is deployed and can be viewed live at [nexdrive-085.vercel.app](http
 1. Start the development server: `npm run dev`
 2. Open your browser and go to `http://localhost:3000`
 
+-->
 ## License
 
-[MIT LICENSE](license)
--->
+[GPL LICENSE](license)
