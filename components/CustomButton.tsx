@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { CustomButtonProps } from "@types";
+import { CustomButtonProps } from "@/types";
 
 const Button = ({ isDisabled, btnType, containerStyles, textStyles, title, rightIcon, handleClick }: CustomButtonProps) => (
   <button
@@ -11,7 +11,7 @@ const Button = ({ isDisabled, btnType, containerStyles, textStyles, title, right
     className={`custom-btn ${containerStyles}`}
     onClick={handleClick}
   >
-    <span className={`flex-1 ${textStyles}`}>{title}</span>
+    <span className={`flex-1 text-black font-bold ${textStyles}`}>{title}</span>
     {rightIcon && (
       <div className="relative w-6 h-6">
         <Image

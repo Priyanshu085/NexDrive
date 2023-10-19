@@ -2,16 +2,15 @@ import { footerLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 
-
 const Footer = () => (
-  <footer className='flex flex-col text-black-100  mt-5 border-t border-gray-100'>
+  <footer className='flex flex-col text-white  mt-5 border-t border-gray-100'>
     <div className='flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10'>
       <div className='flex flex-col justify-start items-start gap-6'>
         <Link href='/' className='flex justify-center items-center'>
           <Image src='/logo.svg' alt='logo' width={65} height={15} className='object-contain' />
-          <h2 className="text-2xl text-primary font-bold">NexDrive</h2>
+          <h2 className="text-2xl text-white font-bold">NexDrive</h2>
         </Link>
-        <p className='text-base text-gray-700'>
+        <p className='text-base text-white'>
           Carhub 2023 <br />
           All Rights Reserved &copy;
         </p>
@@ -26,7 +25,7 @@ const Footer = () => (
                 <Link
                   key={link.title}
                   href={link.url}
-                  className="text-gray-500"
+                  className="text-gray-400"
                 >
                   {link.title}
                 </Link>
@@ -41,10 +40,10 @@ const Footer = () => (
       <p>@2023 CarHub. All rights reserved</p>
 
       <div className="footer__copyrights-link">
-        <Link href="/" className="text-gray-500">
+        <Link href="/" className="text-gray-300">
           Privacy & Policy
         </Link>
-        <Link href="/" className="text-gray-500">
+        <Link href="/" className="text-gray-300">
           Terms & Condition
         </Link>
       </div>
