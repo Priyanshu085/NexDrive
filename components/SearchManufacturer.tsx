@@ -50,14 +50,14 @@ const SearchManufacturer = ({manufacturer, setManuFacturer}: SearchManuFacturerP
           >
 
             <Combobox.Options
-              className='absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'
+              className='absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-gray-700 py-2 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'
               static
             >
             {filteredManufacturers.map((item) => (
                 <Combobox.Option
                   key={item}
-                  className={({ active }) => `px-2 relative seacrch-manufacturer__option 
-                  ${active ? 'bg-primary text-white' : 'text-gray-900'}  `} 
+                  className={({ active }) => `p-2 text-lg relative seacrch-manufacturer__option 
+                  ${active ? 'bg-gray-900 text-primary' : 'text-gray-300'}  `} 
                   value={item}
                 >
                   {({ selected, active}) => (
