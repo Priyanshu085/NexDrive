@@ -1,9 +1,10 @@
-import { CarCard, CustomFilter, Hero } from '@/components'
+import { CarCard, CustomFilter, Hero, ShowMore } from '@/components'
 import SearchBar from '@/components/SearchBar'
+import { fuels, yearsOfProduction } from '@/constants';
+import { HomeProps } from '@/types';
 import { fetchCars } from '@/utils'
 
-export default async function Home({ searchParams }:any) {
-
+export default async function Home({ searchParams }:HomeProps) {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || '',
     year: searchParams.year || 2022,
@@ -28,10 +29,12 @@ export default async function Home({ searchParams }:any) {
           <SearchBar/>
 
           <div className='home__filter-container'>
-            <CustomFilter />
-            <CustomFilter />
+            <CustomFilter title='fuel' options={fuels}/>
+            <CustomFilter title='year' options={yearsOfProduction}/>
           </div>
         </div>
+
+        //Addin a Loader
 
         {!isDataEmpty ? (
           <section>
@@ -41,16 +44,21 @@ export default async function Home({ searchParams }:any) {
             ))}
           </div>
 
-        </section>
-      ) : (
-        <div className='home__error-container'>
-          <h2 className='text-black text-xl font-bold'>Oops, no results found</h2>
-          <p>{allCars?.message}</p>
-        </div>
-        
-        )}
+          <ShowMore
+            pageNumber={(searchParams.limit || 10)/10}
+            isNext={(searchParams.limit || 10) > allCars.length}
+          />
 
-      </div>
+          </section>
+        ) : (
+          <div className='home__error-container'>
+            <h2 className='text-black text-xl font-bold'>Oops, no results found</h2>
+            <p>{allCars?.message}</p>
+          </div>
+          
+          )}
+
+        </div>
     </main>
   )
 }
