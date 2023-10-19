@@ -34,7 +34,7 @@ export default async function Home({ searchParams }:HomeProps) {
           </div>
         </div>
 
-        //Addin a Loader
+        {/* Addin a Loader */}
 
         {!isDataEmpty ? (
           <section>
