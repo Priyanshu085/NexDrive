@@ -47,7 +47,7 @@
 }
 
 .hero__subtitle {
-  @apply text-[27px] text-black-100 font-light mt-5;
+  @apply text-[27px] font-light mt-5;
 }
 
 .hero__image-container {
@@ -171,11 +171,11 @@
 }
 
 .footer__links {
-  @apply flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-20;
+  @apply flex-1 w-full text-white flex md:justify-end flex-wrap max-md:mt-10 gap-20;
 }
 
 .footer__link {
-  @apply flex flex-col gap-6 text-base min-w-[170px];
+  @apply flex flex-col text-white gap-6 text-base min-w-[170px];
 }
 
 .footer__copyrights {

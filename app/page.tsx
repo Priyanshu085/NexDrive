@@ -2,15 +2,20 @@ import { CarCard, CustomFilter, Hero } from '@/components'
 import SearchBar from '@/components/SearchBar'
 import { fetchCars } from '@/utils'
 
-export default async function Home() {
+export default async function Home({ searchParams }:any) {
 
-  const allCars = await fetchCars();
-  // console.log(allCars);
+  const allCars = await fetchCars({
+    manufacturer: searchParams.manufacturer || '',
+    year: searchParams.year || 2022,
+    fuel: searchParams.fuel || '',
+    limit: searchParams.limit || 12,
+    model: searchParams.model || ''
+  }) ;
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
   return (
-    <main className='overflow-hidden'>
+    <main dark-theme='night' className='text-white overflow-hidden'>
       <Hero />
 
       <div className='mt-12 padding-x paddinng-y max-width' id='discover'>
