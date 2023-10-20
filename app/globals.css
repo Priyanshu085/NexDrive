@@ -21,7 +21,7 @@
 }
 
 .padding-y {
-  @apply py-4;
+  @apply py-2;
 }
 
 .flex-center {

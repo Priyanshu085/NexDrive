@@ -19,7 +19,7 @@ export default async function Home({ searchParams }:HomeProps) {
     <main dark-theme='dark' className='text-white overflow-hidden'>
       <Hero />
 
-      <div className='mt-12 padding-x paddinng-y max-width' id='discover'>
+      <div className='padding-x paddinng-y max-width' id='discover'>
         <div className="home__container">
           <h1 className='text-4xl font-extrabold text-primary'>Car Catalogue</h1>
           <p>Explore your dream 🚗 cars</p>
