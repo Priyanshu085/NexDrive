@@ -12,7 +12,7 @@ interface CarCardProps {
 
 const CarCard = ({car} : CarCardProps) => {
   const { city_mpg, year, make, model, transmission, drive} = car;
-  
+      
   const [isOpen, setIsOpen] = useState(false);
 
   const carRent = calculateCarRent(city_mpg, year);
@@ -57,8 +57,8 @@ const CarCard = ({car} : CarCardProps) => {
         <div className='car-card__btn-container'>
           <CustomButton 
             title="View More"
-            containerStyles="w-full py-[16px] rounded-full bg-gray-700"
-            textStyles="text-white hover:text-primary text-[14px] leading-[17px] font-bold"
+            containerStyles="w-full py-[16px] rounded-full bg-gray-700 hover:bg-gray-700 hover:text-black"
+            textStyles="text-white text-[14px] hover:text-primary leading-[17px] font-bold"
             rightIcon="/right-arrow.svg"
             handleClick={() => setIsOpen(true)}
           />
